@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="requisitando, cep, get, promises, AJAX, javascript, CSS, HTML">
+    <meta name="description" content="Página simples com intuito despretencioso de desmontrar conhecimento caso seja necessário.">
+    <meta name="author" content="Rodrigo Siliunas Cunha">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="#" />
+    <title>Requsitando informações:</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="images/locale-cep.png" alt="Logotipo do site que fica no cabeçalho. Está dizendo exatamente: Localizando CEP.">
+        </figure>
+    </header>
+
+    <main class="box">
+        <div class="box box-one"></div>
+
+        <div class="box box-two">
+            <div class="box box-two content">
+                <form action="" method="get">
+                    <input type="text" name="zipCode" id="zipCode" placeholder="Informe seu CEP">
+                    <input type="button" value="Buscar" id="button">
+                </form>
+
+                <div class="textArea"></div>
+
+            </div>
+
+            <p>❤️ Créditos <strong>totais</strong> pelas informações apresentadas a API <em><a href="https://viacep.com.br/">ViaCEP</a></em>. ❤️</p>
+        </div>
+
+        <div class="box box-three"></div>
+    </main>
+
+
+    <footer>
+        <p>© <em><a href="https://github.com/JazziJazz">Jazz</a></em> 2021 — Todos os direitos reservados.</br>
+            Orgulhosamente criado com <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> e ❤️ por <em>Rodrigo Siliunas</em>!</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
