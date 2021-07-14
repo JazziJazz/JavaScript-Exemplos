@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jazz">
+
+    <title>JavaScript TODO List</title>
+
+    <!-- Favicon Alert Fix -->
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <main class="box">
+        <div class="box box-one"></div>
+        <div class="box box-two">
+
+            <div class="content">
+
+                <form @submit.prevent="createTask">
+                    <input type="text" placeholder="Todo" v-model="form.text"/>
+
+                    <label class="checkbox-input">
+                        {{ form.done ? "Concluida" : "Não concluída" }}
+                        <input type="checkbox" v-model="form.done" :checked="form.done" />
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <button type="submit">Adicionar</button>
+                </form>
+
+                <ul class="todos">
+                    <span class="todos-title">Lista de afazeres</span>
+
+                    <li :class="['todo', { done: task.done }]" v-for="task in todos">
+                        <label class="checkbox-input" @click="changeStatusTodo(task)">
+                            <input type="checkbox" :checked="task.done" />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <span class="todo-text">{{ task.text }}</span>
+                        <a class="todo-delete" @click="deleteTask(task.id)"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-three"></div>
+    </div>
+
+    <footer>
+        <p>© <em><a href="https://github.com/JazziJazz">Jazz</a></em> 2021 — Todos os direitos reservados.</br>
+            Orgulhosamente criado com <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>VueJS</strong> e ❤️ por <em>Rodrigo Siliunas</em>!</p>
+    </footer>
+
+    <script src="./bundle.js"></script>
+</body>
+</html>
